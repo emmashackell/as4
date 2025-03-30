@@ -1,0 +1,1 @@
+[30-Mar-2025 20:40:43 UTC] PHP Fatal error:  Out of memory (allocated 35651584) (tried to allocate 2097152 bytes) in /workspaces/as4/.wordpress/wp-content/plugins/ecommerce-product-catalog/modules/price/price-meta.php on line 27
