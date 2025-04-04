@@ -10,3 +10,47 @@
 [04-Apr-2025 15:24:36 UTC] PHP Fatal error:  Out of memory (allocated 29360128) (tried to allocate 2097152 bytes) in /workspaces/as4/.wordpress/wp-content/plugins/ecommerce-product-catalog/modules/price/price-meta.php on line 38
 [04-Apr-2025 15:24:41 UTC] PHP Fatal error:  Out of memory (allocated 29360128) (tried to allocate 2097152 bytes) in /workspaces/as4/.wordpress/wp-content/plugins/ecommerce-product-catalog/modules/price/price-meta.php on line 31
 [04-Apr-2025 15:24:41 UTC] PHP Fatal error:  Out of memory (allocated 29360128) (tried to allocate 184320 bytes) in  on line 0
+[04-Apr-2025 15:56:11 UTC] PHP Fatal error:  Uncaught RuntimeException: GuzzleHttp requires cURL, the allow_url_fopen ini setting, or a custom HTTP handler. in /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/third-party/guzzlehttp/guzzle/src/Utils.php:93
+Stack trace:
+#0 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/third-party/guzzlehttp/guzzle/src/HandlerStack.php(45): Google\Site_Kit_Dependencies\GuzzleHttp\Utils::chooseHandler()
+#1 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/third-party/guzzlehttp/guzzle/src/Client.php(57): Google\Site_Kit_Dependencies\GuzzleHttp\HandlerStack::create()
+#2 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/third-party/google/apiclient/src/Client.php(1004): Google\Site_Kit_Dependencies\GuzzleHttp\Client->__construct(Array)
+#3 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/third-party/google/apiclient/src/Client.php(966): Google\Site_Kit_Dependencies\Google\Client->createDefaultHttpClient()
+#4 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/includes/Core/Authentication/Clients/Client_Factory.php(63): Google\Site_Kit_Dependencies\Google\Client->getHttpClient()
+#5 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/includes/Core/Authentication/Clients/OAuth_Client_Base.php(162): Google\Site_Kit\Core\Authentication\Clients\Client_Factory::create_client(Array)
+#6 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/includes/Core/Util/Health_Checks.php(109): Google\Site_Kit\Core\Authentication\Clients\OAuth_Client_Base->get_client()
+#7 /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/includes/Core/Util/Health_Checks.php(86): Google\Site_Kit\Core\Util\Health_Checks->check_google_api()
+#8 /workspaces/as4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1292): Google\Site_Kit\Core\Util\Health_Checks->Google\Site_Kit\Core\Util\{closure}(Object(WP_REST_Request))
+#9 /workspaces/as4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/google-site-ki...', Array, NULL)
+#10 /workspaces/as4/.wordpress/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#11 /workspaces/as4/.wordpress/wp-includes/rest-api.php(449): WP_REST_Server->serve_request('/google-site-ki...')
+#12 /workspaces/as4/.wordpress/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#13 /workspaces/as4/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#14 /workspaces/as4/.wordpress/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#15 /workspaces/as4/.wordpress/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#16 /workspaces/as4/.wordpress/wp-includes/class-wp.php(813): WP->parse_request('')
+#17 /workspaces/as4/.wordpress/wp-includes/functions.php(1336): WP->main('')
+#18 /workspaces/as4/.wordpress/wp-blog-header.php(16): wp()
+#19 /workspaces/as4/.wordpress/index.php(17): require('/workspaces/as4...')
+#20 {main}
+  thrown in /workspaces/as4/.wordpress/wp-content/plugins/google-site-kit/third-party/guzzlehttp/guzzle/src/Utils.php on line 93
+[04-Apr-2025 16:01:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Address family not supported by protocol in /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connectors/Connector.php:53
+Stack trace:
+#0 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connectors/Connector.php(53): PDO->__construct('mysql:host=;dbn...', '', '', Array)
+#1 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connectors/Connector.php(34): IAWPSCOPED\Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=;dbn...', '', '', Array)
+#2 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connectors/MySqlConnector.php(22): IAWPSCOPED\Illuminate\Database\Connectors\Connector->createConnection('mysql:host=;dbn...', Array, Array)
+#3 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connectors/ConnectionFactory.php(157): IAWPSCOPED\Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connection.php(884): IAWPSCOPED\Illuminate\Database\Connectors\ConnectionFactory->IAWPSCOPED\Illuminate\Database\Connectors\{closure}()
+#5 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/IAWP/Illuminate_Builder.php(98): IAWPSCOPED\Illuminate\Database\Connection->getPdo()
+#6 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/IAWP/Illuminate_Builder.php(83): IAWP\Illuminate_Builder::disable_mariadb_optimization(Object(IAWPSCOPED\Illuminate\Database\MySqlConnection))
+#7 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/IAWP/Illuminate_Builder.php(31): IAWP\Illuminate_Builder::make_connection()
+#8 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/IAWP/Database.php(81): IAWP\Illuminate_Builder::new()
+#9 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/IAWP/Database.php(25): IAWP\Database::user_privileges()
+#10 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/IAWP/Database.php(21): IAWP\Database::missing_database_privileges()
+#11 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/iawp-bootstrap.php(216): IAWP\Database::has_correct_database_privileges()
+#12 /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/iawp.php(64): require_once('/workspaces/as4...')
+#13 /workspaces/as4/.wordpress/wp-admin/includes/plugin.php(2387): include_once('/workspaces/as4...')
+#14 /workspaces/as4/.wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('independent-ana...')
+#15 /workspaces/as4/.wordpress/wp-admin/plugins.php(60): activate_plugin('independent-ana...', 'http://localhos...', false)
+#16 {main}
+  thrown in /workspaces/as4/.wordpress/wp-content/plugins/independent-analytics/vendor/illuminate/database/Connectors/Connector.php on line 53
